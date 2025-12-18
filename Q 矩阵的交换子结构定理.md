@@ -10,4 +10,30 @@
    若线性无关，则可以使用上述定理，通常这时已经算出来了
    若线性相关，则不可以使用上述定理，上面的活就白干了
 
-参见丘砖习题 9.9 第 4 题
+### 定理：相似矩阵的交换子空间
+
+>[!note] 相似矩阵的交换子空间
+>$A, B$ 都是域 $\mathbb{F}$ 上的 $n$ 级矩阵，若 $A\sim B$，则有 $C(A)\cong C(B)$，则有 $\dim(C(A)) = \dim(C(B))$ 
+
+由相似，可知存在可逆矩阵 $P$，$s.t.B=P^{-1}AP$ 
+$$
+\begin{align}
+X\in C(A) &\iff XA=AX \\
+&\iff XPBP^{-1}=PBP^{-1}X \\
+&\iff (P^{-1}XP)B=B(P^{-1}XP) \\
+&\iff P^{-1}XP\in C(B)
+\end{align}
+$$
+也即这样建立了一个映射：
+$$
+\begin{align}
+\sigma:C(A)&\to C(B) \\
+X&\to P^{-1}XP
+\end{align}
+$$
+显然这样的映射是双射，并且满足线性性，于是是同构，于是：
+$$
+C(A)\cong C(B)\implies \dim(C(A)) = \dim(C(B))
+$$
+证毕
+
